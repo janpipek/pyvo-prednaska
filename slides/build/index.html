@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Histogramy z otevřených dat s knihovnou physt</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./theme/physt-white.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/github.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+
+
+<!-- .slide: data-background="background.png" -->
+
+## Histogramy <span style="font-size:90%; opacity: 0.9">z</span>&nbsp;otevřených dat <span style="font-size:90%; opacity: 0.9">s&nbsp;knihovnou</span> physt
+
+<div style="height: 1em"></div>
+
+### Brněnské PyVo, <span style="font-size: 80%; opacity:0.5">30.3.2017</span>
+
+##### Jan Pipek <span style="font-size: 80%; text-transform: none; opacity:0.5">(jan.pipek@gmail.com)</span>
+
+<div style="height: 1em"></div>
+
+<div class="physt-note">[https://github.com/janpipek/pyvo-prednaska](https://github.com/janpipek/pyvo-prednaska)</div>
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background="#8080f7" data-transition="page" -->
+
+# Histogramy <span style="color:white">?</span>
+</script></section><section data-markdown><script type="text/template">
+### 79 320 896 měření teploty
+
+```python
+ 3.1,  19.1,  12.6,  12.5,  21.6,  14. ,  24.4,  22.1,  18.5,
+ 1. ,  35.1,  -2.3,   9.7,   6. ,   0. ,  28.7,  19.5,  32.1,
+11.3,  15.6,   6.3,   2.5,   0.6,  12.2,  16.4,  14.1,  17.5,
+15.9,  12.1,  13.5,   6.7,  15.7,   8.7,   8.5,  14.8,  15.1,
+-1.6,  14.6,  10.4,   0.2,  26.7,  15.1,  -4.2,   2.8,   6. ,
+ 7.1,   6.6,  15.8,   6.5,   5. ,   9.3,  17.9,  11.2,  11.8,
+ 6.3,  -0.7,   6.2,   8.4,  19.4,  13.4,  19.3,  16. ,  19.5,
+ 8.7,   4.7,   7.8,   8.2,   7.4,  20.7,  17.7,  11.4,  21.2,
+ 4.1,  12.9,  16.9,  21.4,  19.2,   0.4,  16.5,   8.8,  -4.5,
+ 6.1,   0.2,   6.4,   1.6,  26.4,  21.1,  10.8,   5.2,  19.4,
+-2.9,   0.9,   2.7,  11.3,  27.7,  15.5,  15.7,  30.8,   0.7,
+15.9,   4.9,  23.4,  23.5,   4.4,  21.2,   6.5,  -0.5,   0.7,
+...
+```
+
+Co s tím !? <!-- .element: class="fragment" style="color: red; text-align: right"-->
+</script></section><section data-markdown><script type="text/template">
+<div style="height: 1em"></div>
+
+<div class="physt-note">`rugplot()` pomocí knihovny  [seaborn](http://seaborn.pydata.org)<div>
+
+![10 points](10points.png) <!-- .element: class="fragment" -->
+
+![100 points](100points.png) <!-- .element: class="fragment" -->
+
+![1000 points](1000points.png) <!-- .element: class="fragment" -->
+
+</script></section><section data-markdown><script type="text/template">
+### KDE (jádrový odhad hustoty)
+
+![distplot(1000 points)](distplot1000.png)
+
+<div class="physt-note">`distplot(kde=True, rug=True)` pomocí knihovny  [seaborn](http://seaborn.pydata.org)<div>
+</script></section><section data-markdown><script type="text/template">
+### Histogram
+
+![histogram](histplot.png)
+</script></section><section data-markdown><script type="text/template">
+### Jak to dělají? A co tím myslí?
+
+* numpy
+
+* matplotlib
+
+* pandas
+
+* (seaborn)
+
+<div class="physt-note">⇾ Notebook č. 1<div>
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background="#808080" data-transition="page" -->
+
+# <img src="physt-logo.svg" style="width:28%; max-height:2048px; background:none; opacity:0.5; z-index:-1; position: absolute; bottom:50%, left: 50%" />Knihovna <span style="color:yellow">physt</span>
+</script></section><section data-markdown><script type="text/template">
+## Hlavní cíle
+
+* objektová reprezentace <!-- .element: class="fragment" -->
+
+* inteligentní biny <!-- .element: class="fragment" -->
+
+* aritmetika / operace / statistika <!-- .element: class="fragment" -->
+
+* vizualizace s různými backendy <!-- .element: class="fragment" -->
+
+<div class="physt-note fragment">⇾ Notebook č. 2<div>
+</script></section><section data-markdown><script type="text/template">
+## Objekty
+
+![Schema](diagram.png)
+</script></section><section data-markdown><script type="text/template">
+## Aritmetika / operace
+
+* postupná akumulace
+
+* aritmetické operace
+
+* projekce
+
+* slučování binů
+
+<div class="physt-note fragment">⇾ Notebook č. 3<div>
+</script></section><section data-markdown><script type="text/template">
+## Zobrazovací backendy
+</script></section><section data-markdown><script type="text/template">
+### matplotlib
+
+<table border="0">
+<tr><td>![Koule](koule.png)</td><td>![Pěst](physt.png)</td></tr>
+</table>
+</script></section><section data-markdown><script type="text/template">
+### matplotlib
+
+<table>
+<tr><td>![Logaritmický](gausslog.png)</td><td>![Čtverce](boxes.png)</td></tr>
+</table>
+</script></section><section data-markdown><script type="text/template">
+### bokeh (experimentální)
+
+<iframe src="bokeh.html" style="height: 800px; width: 500px"/>
+
+<div class="physt-note fragment"><div class="physt-note">`h.plot("bar", backend="bokeh")`<div><div>
+</script></section><section data-markdown><script type="text/template">
+### folium (experimentální)
+
+<iframe src="folium.html" style="height: 600px; width: 600px"/>
+
+<div class="physt-note">`h.plot("geo_map", backend="folium")`<div>
+</script></section><section data-markdown><script type="text/template">
+## Co chybí?
+
+* konzistence <!-- .element: class="fragment" -->
+
+* optimalizace <!-- .element: class="fragment" -->
+
+* integrace s výpočetními knihovnami <!-- .element: class="fragment" -->
+
+* testování <!-- .element: class="fragment" -->
+
+* dokumentace <!-- .element: class="fragment" -->
+
+<div class="physt-note fragment" style="color: #88f">Kdo pomůže?<div>
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="background.png" -->
+
+# &lt;/talk&gt;
+
+<div style="height:4em;"></div>
+
+<https://github.com/janpipek/pyvo-prednaska>
+
+<https://github.com/janpipek/physt>
+
+jan.pipek@gmail.com
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"fade","controls":false,"progress":true};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+    </body>
+</html>

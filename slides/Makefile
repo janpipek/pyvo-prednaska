@@ -5,7 +5,11 @@ themeoptions = --theme $(theme) --highlight-theme $(highlighttheme)
 all: static  # print
 
 static: slides.md background.png
-	reveal-md slides.md --static_site $(themeoptions)
+	reveal-md slides.md --static build $(themeoptions)
+	cp -r theme build
+	cp *png build
+	cp *html build
+	cp *svg build
 
 print: slides.md background.png
 	reveal-md slides.md --print slides.pdf $(themeoptions)
