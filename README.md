@@ -1,3 +1,21 @@
+# Přednáška "Histogramy z otevřených dat s knihovnou physt
+
+(30.3.2007, Brněnské PyVo)
+
+## Prezentace
+
+V adresáři slides je zdroj, který lze živě pustit jako lokální webový server. Nutno mít nainstalovaný `reveal-md`, pak pustit `make present`...
+
+Ale lepší je otevřít statickou prezentaci ze souboru `slides/build/index.html`
+
+## Notebooky
+
+01 - ukázka práce s histogramy v pandas, matplotlib, pandas
+
+02 - ukázka jednoduché práce s physt
+
+03 - ukázka práce s vícerozměrnými histogramy
+
 ## Odkazy 
 
 <https://github.com/janpipek/physt> - domovská stránka projektu
@@ -7,3 +25,5 @@
 ```
 pip install physt
 ```
+
+(pak se hodí mít nainstalovaný pandas a matplotlib, které nejsou standardně vyžadovány)
