@@ -8,6 +8,8 @@ V adresáři slides je zdroj, který lze živě pustit jako lokální webový se
 
 Ale lepší je otevřít statickou prezentaci ze souboru `slides/build/index.html`
 
+A asi úplně nejepší je zobrazit si prezentaci rovnou online zde: <http://physt.vzdusne.cz/pyvo-prednaska/>
+
 ## Notebooky
 
 01 - ukázka práce s histogramy v pandas, matplotlib, pandas
