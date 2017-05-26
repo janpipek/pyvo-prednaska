@@ -12,11 +12,11 @@ A asi úplně nejepší je zobrazit si prezentaci rovnou online zde: <http://phy
 
 ## Notebooky
 
-01 - ukázka práce s histogramy v pandas, matplotlib, pandas
+01 - ukázka práce s histogramy v pandas, matplotlib, pandas: <http://nbviewer.jupyter.org/github/janpipek/pyvo-prednaska/blob/master/notebooks/01-numpy_matplotlib_pandas.ipynb>
 
-02 - ukázka jednoduché práce s physt
+02 - ukázka jednoduché práce s physt: <http://nbviewer.jupyter.org/github/janpipek/pyvo-prednaska/blob/master/notebooks/02-zaklady_physt.ipynb>
 
-03 - ukázka práce s vícerozměrnými histogramy
+03 - ukázka práce s vícerozměrnými histogramy: <http://nbviewer.jupyter.org/github/janpipek/pyvo-prednaska/blob/master/notebooks/03-adaptivni_nd_histogramy.ipynb>
 
 ## Odkazy 
 
